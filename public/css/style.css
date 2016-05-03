@@ -7,7 +7,26 @@
   margin-left: 10px;
   display:inline-block;
 }
+body {
+    background-color: lightblue;
+}
+
+body {
+
+}
 
 .footer {
   margin-top: 25px;
+}
+
+.float-right-homie {
+  float: left;
+  width: 40%;
+  display: inline-block;
+}
+
+.float-left-homie {
+  float: left;
+  width: 40%;
+  display: inline-block;
 }

@@ -6,12 +6,28 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <ul class="nav nav-tabs">
+      <% if logged_in? %>
+          <li>Welcome, <%= current_user.username %></li>
+          <li><a href="/tweet">Post a Tweet!</a></li>
+          <li><a href="/logout">Logout</a></li>
+      <% else %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+      <% end %>
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+    <div class="row">
+      <div class="float-left-homie">
+            <img src="https://d2894izlucyd11.cloudfront.net/images/p/c3/f9/19/c2/74c64fdaf592494b83488be5347b8fc9.jpg" alt="...">
+      </div>
+      <div class="float-right-homie container">
+        <h1>Welcome to Fwitter!</h1>
+        <%= yield %> 
 
-    <div class="container">
-      <h1>Welcome to Fwitter!</h1>
-      <%= yield %> 
-      
-      
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
